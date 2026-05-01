@@ -1,0 +1,159 @@
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: white;
+
+  box-shadow: 0 0 13px rgba(0,0,0,0.15);
+}
+
+/* WRAPPER */
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 0;
+  margin: 0px 10px;
+}
+
+/* LOGO */
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+}
+
+/* DESKTOP MENU */
+
+.desktop-menu {
+  display: flex;
+  gap: 28px;
+}
+
+.desktop-menu a {
+  color: #c41414;
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.desktop-menu a:hover {
+  transform: scale(0.9);
+}
+
+.active {
+  color: black !important;
+}
+
+/* MENU BUTTON */
+
+.menu-btn {
+  display: none;
+
+  font-size: 34px;
+  cursor: pointer;
+
+  color: black;
+}
+
+/* MOBILE SIDEBAR */
+
+.mobile-sidebar {
+  position: fixed;
+
+  top: 0;
+  right: -300px;
+
+  width: 280px;
+  height: 100vh;
+
+  background: white;
+
+  z-index: 2000;
+
+  padding: 80px 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+
+  transition: 0.4s ease;
+
+  box-shadow: -5px 0 20px rgba(0,0,0,0.15);
+}
+
+/* OPEN */
+
+.mobile-sidebar.open {
+  right: 0;
+}
+
+/* SIDEBAR LINKS */
+
+.mobile-sidebar a {
+  font-size: 20px;
+  color: #c41414;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+/* CLOSE BUTTON */
+
+.close-btn {
+  position: absolute;
+
+  top: 20px;
+  right: 25px;
+
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* OVERLAY */
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.5);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.3s ease;
+
+  z-index: 1500;
+}
+
+.mobile-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+}

@@ -1,0 +1,170 @@
+.gallery-section {
+  padding: 14px 0px;
+}
+
+.filter-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  background: #333;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  padding: 5px 8px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: #555;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: #777777;
+}
+
+.gallery-card {
+  position: relative;
+
+  overflow: hidden;
+  cursor: pointer;
+
+  border-radius: 4px;
+
+  height: 250px;
+
+  animation: fadeIn 0.5s ease;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: 0.4s ease;
+
+  z-index: 2;
+}
+
+.gallery-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  text-align: center;
+  color: white;
+
+  transform: translateY(30px);
+  transition: 0.4s ease;
+}
+
+.gallery-card:hover .overlay-content {
+  transform: translateY(0);
+}
+
+.overlay-content h3 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.overlay-content span {
+  font-size: 18px;
+}
+
+.shine {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+
+  width: 60%;
+  height: 250%;
+
+  background: rgba(255,255,255,0.2);
+
+  transform: rotate(25deg);
+
+  transition: 0.7s ease;
+
+  z-index: 3;
+}
+
+.gallery-card:hover .shine {
+  top: -20%;
+  left: 120%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 992px) {
+
+  .gallery-card {
+    height: 320px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .gallery-section {
+    padding: 50px 15px;
+  }
+
+  .filter-wrapper {
+    gap: 10px;
+  }
+
+  .filter-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .gallery-card {
+    height: 260px;
+  }
+
+  .overlay-content h3 {
+    font-size: 22px;
+  }
+
+}

@@ -1,0 +1,215 @@
+<section class="about section-padding" id="about">
+    <div class="container about-wrapper">
+        <h1 class="page-title">About 360 Tours</h1>
+        <section class="hero-section">
+            @for(slide of slides; track slide; let i = $index){
+            <div class="slide" [class.active]="currentSlide === i" [style.backgroundImage]="'url(' + slide.image + ')'">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h4 class="subtitle">
+                        {{ slide.subtitle }}
+                    </h4>
+                    <h1 class="title">
+                        {{ slide.title }}
+                    </h1>
+                    <p class="desc">
+                        {{ slide.description }}
+                    </p>
+                    <button class="hero-btn" (click)="ourWork()">
+                        View Our Work →
+                    </button>
+                </div>
+            </div>
+            }
+            <div class="slide-pagination">
+                @for(item of slides; track item; let i = $index){
+                <div class="slide-number" [class.active]="currentSlide === i" (click)="goToSlide(i)">
+                    <span class="line"></span>
+                    0{{ i + 1 }}
+                </div>
+                }
+            </div>
+        </section>
+        <h2 class="street-heading">Google Street View Trusted Virtual Tours</h2>
+        <div class="container trusted-section">
+            <div class="trusted-content">
+                <img src="images/street-view.png" alt="Street View Trusted" class="trusted-img" />
+                <p>
+                    <strong>
+                        Google Street View Trusted virtual tours provide numerous benefits for local businesses,
+                        including increased visibility, enhanced customer engagement, and improved trust. By offering an
+                        immersive online experience, a virtual tour can significantly boost your online presence and
+                        attract more customers.
+                    </strong>
+                </p>
+
+                <p>
+                    • <strong>Enhanced online visibility and local SEO:</strong>
+                    Integrating a virtual tour into your Google Business Profile can improve your local search engine
+                    optimization (SEO) and help you stand out from the competition.
+                </p>
+
+                <p>
+                    • <strong>Increased search ranking:</strong>
+                    Google tends to favor business listings that include rich, engaging content like virtual tours. This
+                    can lead to higher placement in local search results and the Google Maps “Local Pack,” increasing
+                    your visibility to potential customers searching for businesses in your area.
+                </p>
+
+                <p>
+                    • <strong>More engagement:</strong>
+                    Businesses with photos and a virtual tour on their Google listing are more likely to generate
+                    customer interest. One study found these listings receive twice as much attention and a 41% increase
+                    in requests for directions.
+                </p>
+
+                <p>
+                    • <strong>Improved click-through rates:</strong>
+                    A virtual tour can make a potential customer more likely to click through to your website, call your
+                    business, or request directions.
+                </p>
+
+                <p>
+                    • <strong>Increased trust and credibility:</strong>
+                    In an era of mistrust towards traditional advertising, a Street View virtual tour offers
+                    transparency that can significantly boost your brand’s credibility.
+                </p>
+
+                <p>
+                    • <strong>Shows authenticity:</strong>
+                    Allowing customers to see inside your business shows that you are transparent and have nothing to
+                    hide. This builds trust and confidence before they even visit.
+                </p>
+                <p>
+                    • <strong>Sets proper expectations:</strong>
+                    By giving customers a realistic preview of your space, you can set accurate expectations about your
+                    business’s atmosphere and offerings. This can lead to happier customers and repeat business.
+                </p>
+                <p>
+                    • <strong>Looks professional and modern:</strong>
+                    A high-quality 360-degree tour can make your business appear more modern and accessible, helping you
+                    stand out in a competitive market.
+                </p>
+                <p>
+                    • <strong>Improved customer experience: </strong>
+                    A virtual tour can improve the customer’s journey from the moment they discover your business
+                    online.
+                </p>
+                <p>
+                    • <strong>Reduces uncertainty:</strong>
+                    For customers who are new to your area or business, a virtual tour can reduce the anxiety of
+                    visiting an unfamiliar place by letting them explore the location from home.
+                </p>
+                <p>
+                    • <strong>Accessible marketing:</strong>
+                    The virtual tour can be viewed on desktop or mobile, allowing customers to engage with your business
+                    anytime, anywhere.
+                </p>
+                <p>
+                    • <strong> Cost-effective, long-term marketing asset:</strong>
+                    A Street View virtual tour is a powerful, long-term investment for your marketing strategy.
+                </p>
+                <p>
+                    • <strong>Works 24/7:</strong>
+                    Once published, the virtual tour acts as a passive marketing tool that promotes your business around
+                    the clock without ongoing advertising costs.
+                </p>
+                <p>
+                    • <strong>Reusable content:</strong>
+                    The photos taken for the virtual tour can be used across your website, social media, and other
+                    marketing materials, maximizing your investment.
+                </p>
+                <p>
+                    • <strong>Showcases updates:</strong>
+                    You can regularly update your 360-degree imagery to showcase renovations, new product displays, or
+                    seasonal decor, keeping your online presence fresh and relevant.
+                </p>
+            </div>
+
+        </div>
+
+        <h2 class="street-heading">Google Business Profile</h2>
+        <div class="container trusted-section">
+            <div class="trusted-content">
+                <img src="images/my-business.jpeg" alt="Street View Trusted" class="trusted-img" />
+                <p>
+                    <strong>
+                        Google Business Profile, that helps businesses manage their online presence across Google Search
+                        and Maps. An optimized profile offers benefits such as increased online visibility, better
+                        customer engagement, improved local SEO, and valuable customer insights.
+                    </strong>
+                </p>
+
+
+                • <strong>Increased online visibility and trust</strong>
+
+                <p>
+                    • <strong>Prime search placement: </strong>
+                    A complete and optimized profile significantly increases your chances of appearing in the “Local
+                    3-Pack”—a highly visible section on the first page of local search results.
+                </p>
+
+                <p>
+                    • <strong>Appearance on Google Maps: </strong>
+                    Your business location will be prominently displayed on Google Maps, helping customers find your
+                    physical store and get directions directly from their phones.
+                </p>
+
+                <p>
+                    • <strong>Establish credibility:</strong>
+                    A verified and complete profile—with accurate information and positive reviews—makes your business
+                    appear more reputable and trustworthy to potential customers.
+                </p>
+                •<strong>Improved local SEO</strong>
+                <p>
+                    • <strong>Rank higher in local searches: </strong>
+                    A well-maintained profile is a critical ranking factor for local search queries, especially “near
+                    me” searches, putting you in front of customers with high purchase intent.
+                </p>
+
+                <p>
+                    • <strong>Consistent information (NAP):</strong>
+                    The platform allows you to ensure your business’s name, address, and phone number (NAP) are
+                    consistent across Google, a key factor for improving local search ranking.
+                </p>
+
+                <p>
+                    • <strong>Strategic keywords:</strong>
+                    Including relevant keywords in your business description, services, and posts helps Google
+                    understand and match your business to relevant search queries.
+                </p>
+                • <strong>Enhanced customer engagement</strong>
+                <p>
+                    • <strong>Manage customer reviews:</strong>
+                    You can encourage customers to leave reviews and respond to them directly, which builds trust and
+                    shows you value feedback. Businesses that respond to reviews often see higher revenue.
+                </p>
+                <p>
+                    • <strong>Real-time interaction:</strong>
+                    The profile provides a direct communication channel, allowing customers to message you with
+                    questions or requests, which can lead to higher conversion rates.
+                </p>
+                <p>
+                    • <strong>Promote offers and events: </strong>
+                    You can use Google Posts to share real-time updates, special offers, and events, keeping customers
+                    informed and engaged with your latest news.
+                </p>
+                • <strong>Powerful business insights and data</strong>
+                <p>
+                    • <strong> Performance analytics:</strong>
+                    The Insights dashboard provides valuable data on how customers find and interact with your profile.
+                    You can see:
+                    • What search queries customers used to find your business.
+                    • How many people called your business directly from the listing.
+                    • Where customers requesting driving directions are located.
+                </p>
+                <p>
+                    • <strong>Understand customer behavior:</strong>
+                    By analyzing these insights, you can identify trends, see what keywords are driving traffic, and make informed decisions to refine your marketing strategy.
+                </p>
+                
+            </div>
+
+        </div>
+    </div>
+</section>
