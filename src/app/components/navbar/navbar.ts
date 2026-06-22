@@ -18,7 +18,11 @@ export class Navbar {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(event => {
-      this.activeMenu = event.url;
+      if(event.url && event.url.includes('/portfolio/')){
+        this.activeMenu = '/work'
+      }else{
+        this.activeMenu = event.url;
+      }
     });
   }
 

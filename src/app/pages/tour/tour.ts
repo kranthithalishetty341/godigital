@@ -16,7 +16,7 @@ export class Tour {
   slides = [
     {
       image: 'images/slide1.png',
-      title: 'GO DIGITAL TECHNOLOGY',
+      title: 'UNIVERSAL TECHVISON',
       subtitle: '360 VIRTUAL TOUR',
       description:
         'Improve your business visibility with modern digital experiences.',

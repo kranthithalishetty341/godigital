@@ -13,7 +13,7 @@ export class Home {
   slides = [
     {
       number: '01',
-      title: 'GO DIGITAL TECHNOLOGY',
+      title: 'UNIVERSAL TECHVISON',
       subtitle: '360 VIRTUAL TOUR FOR GOOGLE MAP',
       description:
         'Google Business Profile helps businesses manage their online presence across Google Search and Maps.',
