@@ -1,0 +1,78 @@
+[
+    {
+        "id": 1,
+        "title": "Shivay Kidney & Laser Hospital",
+        "category": "Hospital & Clinic",
+        "image": "images/shivay_kidney_laser_hospital.png",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!4v1782118214896!6m8!1m7!1sCAoSHENJQUJJaENiY1BZNVJJR1J4OE9MTDVBZ0hCMXA.!2m2!1d21.23133694844607!2d72.90182000366723!3f47.15!4f-8.86!5f0.4000000000000002"
+    },
+    {
+        "id": 2,
+        "title": "R.K. Blouses",
+        "category": "Clothing Showroom",
+        "image": "images/rkblouse.PNG",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!4v1782119649553!6m8!1m7!1sCAoSHENJQUJJaEFIdmJFYVRGS2Y0Ync3V21xRkRTVnQ.!2m2!1d21.19577481090924!2d72.8474836845247!3f14.19!4f-3.4200000000000017!5f0.4000000000000002"
+    },
+    {
+        "id": 3,
+        "title": "4 Ever Interior Gallery",
+        "category": "Interior Decoration",
+        "image": "images/4ever_interior_gallery.PNG",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!4v1782120135698!6m8!1m7!1sCAoSHENJQUJJaENZMEJoRUZERlRpQzNjLVdvTTlEdlg.!2m2!1d21.21396589763286!2d72.93433793223106!3f268.96!4f-22.790000000000006!5f0.4000000000000002"
+    },
+    {
+        "id": 4,
+        "title": "URBAN INTERYA",
+        "category": "Interior Decoration",
+        "image": "images/urban_interya.PNG",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!4v1782120354880!6m8!1m7!1sCAoSHENJQUJJaENNSFctOWNvTnBvSUVzYklvYTdmYTk.!2m2!1d21.23107214525385!2d72.87564544643378!3f27.24!4f-6.510000000000005!5f0.4000000000000002"
+    },{
+        "id": 5,
+        "title": "BM Designed Studio",
+        "category": "Clothing Showroom",
+        "image": "images/bm_designer_studio.PNG",
+        "mapUrl":"https://www.google.com/maps/embed?pb=!4v1782123945798!6m8!1m7!1sCAoSHENJQUJJaENRMFAtTzVOOTRGMFdTS2VFRnlDVmE.!2m2!1d21.19816719230876!2d72.84602091110138!3f354.96!4f0.37000000000000455!5f0.4000000000000002"
+    },{
+        "id": 6,
+        "title": "Shree Balaji Textile",
+        "category": "Clothing Showroom",
+        "image": "images/shree_balaji_textile.PNG",
+        "mapUrl":"https://www.google.com/maps/embed?pb=!4v1782125585583!6m8!1m7!1sCAoSHENJQUJJaEN0Wl9tU0VXMnhrR0JMaDJSRUtURzg.!2m2!1d21.19569731225254!2d72.84744338760574!3f358.65!4f2.799999999999997!5f0.4000000000000002"
+    },{
+        "id": 7,
+        "title": "Shree Mahadev Cloth Store",
+        "category": "Clothing Showroom",
+        "image": "images/shree_mahadev_cloth_store.PNG",
+        "mapUrl":"https://www.google.com/maps/embed?pb=!4v1782125660585!6m8!1m7!1sCAoSHENJQUJJaEFWT1VzdU9uV3NscFg0OG1ybjdGbjg.!2m2!1d21.19968652736687!2d72.85951692881734!3f341.68!4f-4.390000000000001!5f1.1924812503605782"
+    },{
+        "id": 8,
+        "title": "Shivnya Textile Factory Outlet",
+        "category": "Clothing Showroom",
+        "image": "images/shivnya_textile.PNG",
+        "mapUrl":"https://www.google.com/maps/embed?pb=!4v1782125789500!6m8!1m7!1sCAoSHENJQUJJaEExYTljajhNaEFGbEx0VHBLLU9jeVA.!2m2!1d21.17830125059192!2d72.83249754835455!3f354.34!4f-0.980000000000004!5f0.4000000000000002"
+    },{
+        "id": 9,
+        "title": "JK Motors",
+        "category": "Clothing Showroom",
+        "image": "images/jk_motors.PNG",
+        "mapUrl":"https://www.google.com/maps/embed?pb=!4v1782125837197!6m8!1m7!1sCAoSHENJQUJJaERhTFdMTE5EOWtfU3lxR2M3UjVXUTg.!2m2!1d21.20271601059248!2d72.88448767148272!3f351.6!4f-6.8799999999999955!5f0.4000000000000002"
+    },{
+        "id": 10,
+        "title": "Devam Banquet Hall",
+        "category": "Clothing Showroom",
+        "image": "images/devam_banquet_hall.PNG",
+        "mapUrl":"https://www.google.com/maps/embed?pb=!4v1782125890153!6m8!1m7!1sCAoSHENJQUJJaERQWlN4MDVWczBybUFrNkJGRV85N3U.!2m2!1d21.18363249698201!2d72.83049988017278!3f2.33!4f-7.579999999999998!5f0.4000000000000002"
+    },{
+        "id": 11,
+        "title": "Ashuthosh Gold",
+        "category": "Clothing Showroom",
+        "image": "images/ashuthosh_gold.PNG",
+        "mapUrl":"https://www.google.com/maps/embed?pb=!4v1782125954173!6m8!1m7!1sCAoSHENJQUJJaEF2R0lnTUVCQlczRGNqUUtUd05kYXk.!2m2!1d21.22328554461566!2d72.88567412762173!3f359.11!4f6.010000000000005!5f0.4000000000000002"
+    },{
+        "id": 12,
+        "title": "AvadhRaj Textile",
+        "category": "Clothing Showroom",
+        "image": "images/avadhraj_textile.PNG",
+        "mapUrl":"https://www.google.com/maps/embed?pb=!4v1782126004681!6m8!1m7!1sCAoSHENJQUJJaERNSmdmYUloRUs0djBaV0ttTzRzZHg.!2m2!1d21.19570697895701!2d72.84395799436622!3f2.3!4f8.290000000000006!5f0.4000000000000002"
+    }
+]

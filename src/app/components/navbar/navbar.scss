@@ -8,6 +8,7 @@
   background: white;
 
   box-shadow: 0 0 13px rgba(0,0,0,0.15);
+  padding: 4px;
 }
 
 /* WRAPPER */
@@ -17,7 +18,7 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: 14px 0;
+  padding: 0;
   margin: 0px 10px;
 }
 
@@ -156,4 +157,7 @@
     display: block;
   }
 
+}
+.logo-img{
+  width: 150px;
 }

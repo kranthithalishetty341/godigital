@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { Router } from '@angular/router';
+import { Api, Gallery } from '../../services/api';
 
 @Component({
   selector: 'app-work',
@@ -7,6 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './work.scss',
 })
 export class Work {
+  private readonly router = inject(Router);
   activeCategory = 'All Work';
 
   categories = [
@@ -16,147 +19,61 @@ export class Work {
     'Clothing Showroom',
     'Hospital & Clinic',
     'Gym & Fitness Centre',
+    'Interior Decoration'
   ];
 
-  galleryItems = [
-    {
-      title: 'Desserts & More',
-      category: 'Cake & Bakery',
-      image: 'images/cafe1.png',
-      link: '/details',
-    },
+  private apiService = inject(Api);
 
-    {
-      title: 'Anna\'s Bakery',
-      category: 'Cake & Bakery',
-      image: 'images/cafe2.webp',
-      link: '/details',
-    },
+  galleries: Gallery[] = [];
+  // filteredItems: Gallery[] = [];
 
-    {
-      title: 'The Bakery',
-      category: 'Cake & Bakery',
-      image: 'images/cafe3.jpg',
-      link: '/details',
-    },
+  filteredItems = signal<Gallery[]>([]);
 
-    {
-      title: 'Patel Cake Shop',
-      category: 'Cake & Bakery',
-      image: 'images/cafe4.jpg',
-      link: '/details',
-    },
+  // get filteredItems() {
+  //   if (this.activeCategory === 'All Work') {
+  //     return this.galleries;
+  //   }
 
-    {
-      title: 'iFixandropair',
-      category: 'Restaurant & Café',
-      image: 'images/restaurant1.jpg',
-      link: '/details',
-    },
-    {
-      title: 'PY cafe',
-      category: 'Restaurant & Café',
-      image: 'images/restaurant2.jpg',
-      link: '/details',
-    },
-    {
-      title: 'Top In Town',
-      category: 'Restaurant & Café',
-      image: 'images/restaurant3.jpg',
-      link: '/details',
-    },
-    {
-      title: 'Brewrista',
-      category: 'Restaurant & Café',
-      image: 'images/restaurant4.webp',
-      link: '/details',
-    },
-    {
-      title: 'Paapi Peth',
-      category: 'Restaurant & Café',
-      image: 'images/restaurant5.avif',
-      link: '/details',
-    },
-    {
-      title: 'Thai Tanic',
-      category: 'Restaurant & Café',
-      image: 'images/restaurant6.jpg',
-      link: '/details',
-    },
-    {
-      title: 'Food Fusion',
-      category: 'Restaurant & Café',
-      image: 'images/restaurant7.jpg',
-      link: '/details',
-    },
+  //   return this.galleries.filter(
+  //     item => item.category === this.activeCategory
+  //   );
+  // }
+  ngOnInit(): void {
+    this.loadData();
+  }
 
-    {
-      title: 'Be You',
-      category: 'Clothing Showroom',
-      image: 'images/clothing1.jpg',
-      link: '/details',
-    },
-    {
-      title: 'Name It.',
-      category: 'Clothing Showroom',
-      image: 'images/clothing2.jpg',
-      link: '/details',
-    },
-    {
-      title: 'Radha Rani',
-      category: 'Clothing Showroom',
-      image: 'images/clothing3.avif',
-      link: '/details',
-    },
-    {
-      title: 'Nayi Naveli',
-      category: 'Clothing Showroom',
-      image: 'images/clothing4.avif',
-      link: '/details',
-    },
-    {
-      title: 'Ganesh',
-      category: 'Hospital & Clinic',
-      image: 'images/hospital1.jpg',
-      link: '/details',
-    },
-    {
-      title: 'Hospital',
-      category: 'Hospital & Clinic',
-      image: 'images/hospital2.avif',
-      link: '/details',
-    },
-    {
-      title: 'Sooriya Hospital',
-      category: 'Hospital & Clinic',
-      image: 'images/hospital3.jpg',
-      link: '/details',
-    },
-    {
-      title: 'Radha Govind Hospital',
-      category: 'Hospital & Clinic',
-      image: 'images/hospital4.jpg',
-      link: '/details',
-    },
-     {
-      title: 'Maharastra Fitness',
-      category: 'Gym & Fitness Centre',
-      image: 'images/gym.png',
-      link: '/details',
-    },
-  ];
+  loadData(): void {
+    this.apiService.getGalleryData().subscribe({
+      next: (data) => {
+        this.galleries = data;
+        console.log(data);
+        this.applyFilter();
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    });
+  }
 
-  get filteredItems() {
+
+  applyFilter() {
     if (this.activeCategory === 'All Work') {
-      return this.galleryItems;
+      this.filteredItems.set(this.galleries);
+    } else {
+      const filteredData = this.galleries.filter(
+        item => item.category === this.activeCategory
+      );
+      this.filteredItems.set(filteredData); 
     }
-
-    return this.galleryItems.filter(
-      item => item.category === this.activeCategory
-    );
   }
 
   setCategory(category: string) {
     this.activeCategory = category;
+  }
+
+
+  onPortfolio(item: any) {
+    console.log(item);
+    this.router.navigate(['/portfolio', encodeURIComponent(item.title)])
   }
 }

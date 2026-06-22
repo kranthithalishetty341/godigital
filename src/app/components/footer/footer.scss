@@ -1,45 +1,6 @@
-// .footer {
-//     background: white;
-//     color: black;
-//     padding: 10px 0;
-//     position: absolute;
-//     bottom: 0;
-//     width: 100%;
-// }
-
-// .footer-content {
-//     display: flex;
-//     justify-content: space-between;
-//     border-top: 1px solid gray;
-// }
-
-// .footer ul {
-//     list-style: none;
-// }
-
-// .footer li {
-//     margin-bottom: 12px;
-// }
-
-// .footer p {
-//     color: #555555;
-//     line-height: 1.8;
-
-// }
-
 .footer {
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-
-//   width: 100%;
-
-//   z-index: 100;
-
   background:white;
-
   padding: 15px 0;
-
   color: black;
 }
 
@@ -58,6 +19,9 @@
    color: #555555;
 }
 
+.logo-img{
+  width: 150px;
+}
 /* Mobile */
 @media (max-width: 768px) {
   .footer-content {

@@ -1,0 +1,11 @@
+<section class="about section-padding" id="about">
+    <div class="container about-wrapper">
+        <div>
+            <h1 class="page-title">{{portfolioName}}</h1>
+            <p (click)="goBack()" class="back">Back to `Our Work` Page</p>
+        </div>
+        @if(selectedPortfolio()){
+            <iframe [src]="selectedPortfolio()" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="iframe-map"></iframe>
+        }
+    </div>
+</section>

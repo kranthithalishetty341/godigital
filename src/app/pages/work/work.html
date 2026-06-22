@@ -13,8 +13,8 @@
             </div>
             <div class="container-fluid">
                 <div class="row g-4">
-                    @for(item of filteredItems; track item.title){
-                    <div class="col-lg-4 col-md-6">
+                    @for(item of filteredItems(); track item.id){
+                    <div class="col-lg-4 col-md-6" (click)="onPortfolio(item)">
                         <div class="gallery-card" >
                             <img [src]="item.image" [alt]="item.title" />
                             <div class="overlay">

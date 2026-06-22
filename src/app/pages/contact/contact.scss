@@ -8,7 +8,18 @@
 /* LEFT */
 .contact-info {
   flex: 1;
-  min-width: 300px;
+  // min-width: 300px;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+  min-width: 0;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-info h2 {
@@ -29,7 +40,7 @@
 /* RIGHT */
 .contact-form {
   flex: 1;
-  min-width: 300px;
+  // min-width: 300px;
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 10px;
@@ -65,5 +76,12 @@
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
+    padding: 15px;
+    gap: 20px;
   }
+}
+.map-container iframe {
+  width: 100%;
+  display: block;
+  border: 0;
 }

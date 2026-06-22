@@ -20,8 +20,8 @@ export class Contact {
   constructor(private http: HttpClient) { }
 
   onSubmit() {
-    // http://localhost:3000/send-email
-    this.http.post('https://contact-backend.onrender.com/send-email', this.formData)
+    this.http.post('http://localhost:3000/send-email', this.formData)
+    // this.http.post('https://contact-backend.onrender.com/send-email', this.formData)
     .subscribe({
       next: (res) => {
         console.log(res);

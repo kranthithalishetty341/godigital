@@ -1,82 +1,44 @@
-<!-- <header class="navbar">
-  <div class="container nav-wrapper">
-    <div class="logo">DIGITALIFY</div>
-
-    <nav>
-      <a (click)="onMenu('')" [ngClass]="{'active' : activeMenu == '' || activeMenu == '/'}">Home</a>
-      <a (click)="onMenu('/work')" [ngClass]="{'active' : activeMenu == '/work'}">Our Work</a>
-      <a (click)="onMenu('/tour')" [ngClass]="{'active' : activeMenu == '/tour'}">About 360 Tours</a>
-      <a (click)="onMenu('/contact')" [ngClass]="{'active' : activeMenu == '/contact'}">Contact</a>
-    </nav>
-  </div>
-</header> -->
-
 <header class="navbar">
-
     <div class="container nav-wrapper">
 
-        <!-- LOGO -->
         <div class="logo">
-            DIGITALIFY
+            <img src="images/logo2.jpeg" class="logo-img"/>
         </div>
 
-        <!-- DESKTOP MENU -->
         <nav class="desktop-menu">
-
             <a (click)="onMenu('')" [ngClass]="{'active' : activeMenu == '' || activeMenu == '/'}">
                 Home
             </a>
-
             <a (click)="onMenu('/work')" [ngClass]="{'active' : activeMenu == '/work'}">
                 Our Work
             </a>
-
             <a (click)="onMenu('/tour')" [ngClass]="{'active' : activeMenu == '/tour'}">
                 About 360 Tours
             </a>
-
             <a (click)="onMenu('/contact')" [ngClass]="{'active' : activeMenu == '/contact'}">
                 Contact
             </a>
-
         </nav>
-
-        <!-- MOBILE MENU BUTTON -->
-
         <div class="menu-btn" (click)="toggleMenu()">
             ☰
         </div>
-
     </div>
-
 </header>
-
-<!-- OVERLAY -->
-
 <div class="mobile-overlay" [class.show]="mobileMenuOpen" (click)="closeMenu()"></div>
-
-<!-- MOBILE SIDEBAR -->
-
 <div class="mobile-sidebar" [class.open]="mobileMenuOpen">
-
     <div class="close-btn" (click)="closeMenu()">
         ✕
     </div>
-
     <a (click)="onMenu('')" [ngClass]="{'active' : activeMenu == '' || activeMenu == '/'}">
         Home
     </a>
-
     <a (click)="onMenu('/work')" [ngClass]="{'active' : activeMenu == '/work'}">
         Our Work
     </a>
-
     <a (click)="onMenu('/tour')" [ngClass]="{'active' : activeMenu == '/tour'}">
         About 360 Tours
     </a>
-
     <a (click)="onMenu('/contact')" [ngClass]="{'active' : activeMenu == '/contact'}">
         Contact
     </a>
-
 </div>
