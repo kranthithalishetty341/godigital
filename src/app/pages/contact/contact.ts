@@ -21,7 +21,8 @@ export class Contact {
 
   onSubmit() {
     // this.http.post('http://localhost:3000/send-email', this.formData)
-    this.http.post('https://godigital-backend.onrender.com/send-email', this.formData)
+    // this.http.post('https://godigital-backend.onrender.com/api/send-email', this.formData)
+    this.http.post('https://godigital-backend-1.onrender.com/send-email', this.formData)
     .subscribe({
       next: (res) => {
         console.log(res);
